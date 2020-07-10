@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div>
     <div class="hamburgerpos">
       <input type="checkbox" id="hamburg">
       <label for="hamburg" class="hamburg" @click="animateNavContent">
@@ -11,22 +11,29 @@
    <div class="topnav" :class="{active: isToggle}">
      <div class="row">
        <div id="myLinks">
-          <a href="#news">About me</a>
-          <a href="#contact">Play Memory</a>
-          <a href="#about">Impressum</a>
+          <a href="#about">about me</a>
+          <a href="#memory">play memory</a>
+          <a href="#impressum">impressum</a>
        </div>
     </div>
    </div>
+   <Technology></Technology>
 </div>
 </template>
 
 <script>
-export default {
 
+import Technology from './Technology.vue'
+
+export default {
 data () {
     return {
       isToggle: false
     }
+  },
+
+  components: {
+    Technology
   },
 
   methods: {
@@ -39,14 +46,17 @@ data () {
 
 <style>
 .topnav.active {
-  transform: translate(10%);
+  transform: translate(-50%);
   opacity: 1;
+  pointer-events: all;
 }
 .topnav {
   overflow: hidden;
   position: absolute;
   opacity: 0;
-  transition: opacity 0.5s, transform 0.5s;
+  right: 0;
+  pointer-events: none;
+  transition: 1s ease-in;
 }
 .navparent {
     position: relative;
@@ -74,7 +84,7 @@ data () {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .topnav a.icon {
