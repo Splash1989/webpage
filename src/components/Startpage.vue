@@ -1,54 +1,36 @@
 <template>
    <div id="startpage">
-      <NavBar></NavBar>
-      <div class="box">
-            <div id="favconarea">
-                <p class="citation">"Persönlichkeiten werden nicht durch schöne Reden geformt,
-                    sondern durch Arbeit und eigene Leistung."
-                </p>
-                <img class="einstein" src="https://img.icons8.com/ultraviolet/80/000000/einstein.png">
-            </div>
-            <div id="namespace">
-                <p id="name">Michael Bund (B.Sc)</p>
-                <p id="job">Softwaredeveloper</p>
-            </div>
-      </div>
-      <technology></technology>
+      <Navbar></Navbar>
+      <!--<technology></technology>-->
    </div>
 </template>
 
 <script>
-    import technology from './Technology.vue'
+    import Navbar from './Navbar.vue'
     export default {
         name: "Startpage",
         components: {
-            technology
+            Navbar
         }
     }
 </script>
 
 
-<style scoped>
+<style>
     #name, #job{
         font-size: 30px;
         text-align: center;
         color: white;
     }
     #startpage{
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .box {
-        display: flex;
-    }
-    #namespace {
-        margin-left: 20%;
-        margin-top: 5%;
-    }
     #favconarea {
         display: flex;
+        margin-top: 10%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
