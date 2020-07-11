@@ -1,16 +1,18 @@
 <template>
    <div id="startpage">
       <Navbar></Navbar>
-      <!--<technology></technology>-->
+      <Technology></Technology>
    </div>
 </template>
 
 <script>
     import Navbar from './Navbar.vue'
+    import Technology from './Technology.vue'
     export default {
         name: "Startpage",
         components: {
-            Navbar
+            Navbar,
+            Technology
         }
     }
 </script>

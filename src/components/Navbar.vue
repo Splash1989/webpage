@@ -12,8 +12,8 @@
      <div class="row">
        <div id="myLinks">
           <a href="#about">about me</a>
-          <a href="#memory">play memory</a>
-          <a href="#impressum">impressum</a>
+          <a href="#memory">memory</a>
+          <a @click="$router.push('/impressum')" href="#impressum">impressum</a>
        </div>
     </div>
    </div>
@@ -49,6 +49,7 @@ data () {
   transform: translate(-50%);
   opacity: 1;
   pointer-events: all;
+  margin-top: 10px;
 }
 .topnav {
   overflow: hidden;
@@ -57,6 +58,7 @@ data () {
   right: 0;
   pointer-events: none;
   transition: 1s ease-in;
+  margin-top: 10px;
 }
 .navparent {
     position: relative;
@@ -66,6 +68,7 @@ data () {
     margin-right: 20px;
     right: 0px;
     z-index: 10;
+    margin-top: 10px;
 }
 .hamburg {
     position: absolute;
@@ -85,6 +88,9 @@ data () {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
+  
+  font-size: 20px;
+  transition: all 0.5s;
 }
 
 .topnav a.icon {
@@ -92,8 +98,13 @@ data () {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  transform: scale(1.3);
+  transition: all 0.5s;
 }
 
 
@@ -114,10 +125,10 @@ input#hamburg {display:none}
    left:10px;
    height: 4px; 
    width: 55px; 
-   background: white; 
+   background: #ddd; 
    border-radius: 2px;
    display: block; 
-   transition: 0.5s; 
+   transition: 1.5s; 
    transform-origin: center; 
 }
 

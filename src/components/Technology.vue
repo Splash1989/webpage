@@ -24,6 +24,9 @@
         background-color: #006600;
         padding-bottom: 20px;
         opacity: 0.6;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
     }
     #jslogo, #githublogo, #bootstraplogo,
     #gitlogo, #csslogo {

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-if="ie > 0">
-
+      <IE></IE>
     </div>
     <div v-else>
       <router-view></router-view>
@@ -10,9 +10,13 @@
 </template>
 
 <script>
-
+import IE from './components/IE.vue'
 export default {
   name: 'App',
+
+  components: {
+    IE
+  },
 
   data () {
     return {
