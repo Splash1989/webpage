@@ -1,5 +1,6 @@
 <template>
-   <div id="startpage">
+   <div scroll="no" id="startpage">
+      <VVanta effect="birds" :options=options></VVanta>
       <Navbar></Navbar>
       <Technology></Technology>
    </div>
@@ -8,12 +9,30 @@
 <script>
     import Navbar from './Navbar.vue'
     import Technology from './Technology.vue'
+     import VVanta from 'vue-vanta';
     export default {
         name: "Startpage",
         components: {
             Navbar,
-            Technology
-        }
+            Technology,
+            VVanta
+        },
+
+       data () {
+         return {
+           options: {
+               mouseControls: true,
+               touchControls: true,
+               minHeight: 1400,
+               minWidth: 1400,
+               scale: 1.00,
+               scaleMobile: 1.00,
+               backgroundColor: 0x70809,
+               color1: 0xfff00,
+               separation: 30.00
+           }
+         }
+       }
     }
 </script>
 

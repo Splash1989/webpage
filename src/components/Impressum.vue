@@ -1,9 +1,9 @@
 <template>
-<div>
+<div id="test">
     <div id="impressum">
-        Impressum
+         <Navbar></Navbar>
+         <div>Impressum</div>
     </div>
-    <Navbar></Navbar>
 </div>
 </template>
 
@@ -11,17 +11,19 @@
 import Navbar from './Navbar.vue'
 
 export default {
-        name: "Impressum",
-        components: {
-            Navbar
-        }
-    }
+    name: "Impressum",
+       components: {
+          Navbar
+       }
+}
 </script>
 
 
 <style>
 
 #impressum {
-    background-color: white;
+    background-color: red;
+    width: 100%;
+    height: 100%;
 }
 </style>

@@ -11,29 +11,23 @@
    <div class="topnav" :class="{active: isToggle}">
      <div class="row">
        <div id="myLinks">
+          <a @click="$router.push('/')" href="#home">home</a>
           <a href="#about">about me</a>
           <a href="#memory">memory</a>
           <a @click="$router.push('/impressum')" href="#impressum">impressum</a>
        </div>
     </div>
    </div>
-   <Technology></Technology>
 </div>
 </template>
 
 <script>
-
-import Technology from './Technology.vue'
 
 export default {
 data () {
     return {
       isToggle: false
     }
-  },
-
-  components: {
-    Technology
   },
 
   methods: {
@@ -49,7 +43,6 @@ data () {
   transform: translate(-50%);
   opacity: 1;
   pointer-events: all;
-  margin-top: 10px;
 }
 .topnav {
   overflow: hidden;
@@ -58,13 +51,12 @@ data () {
   right: 0;
   pointer-events: none;
   transition: 1s ease-in;
-  margin-top: 10px;
+  top: 0px;
 }
 .navparent {
     position: relative;
 }
 .hamburgerpos {
-    position: absolute;
     margin-right: 20px;
     right: 0px;
     z-index: 10;
@@ -113,7 +105,7 @@ label.hamburg {
    width: 75px; 
    height: 47px; 
    position: relative; 
-   margin-left: auto; margin-right: auto;
+   margin-left: auto;
    border-radius: 4px; 
    opacity: 0.7;
 }
