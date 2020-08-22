@@ -15,6 +15,7 @@
           <a href="#about">about me</a>
           <a href="#memory">memory</a>
           <a @click="$router.push('/impressum')" href="#impressum">impressum</a>
+          <a @click="$router.push('/Voter')" href="#voter">Voter</a>
         </div>
       </div>
     </div>
@@ -42,6 +43,8 @@ export default {
   transform: translate(-50%);
   opacity: 1;
   pointer-events: all;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 .topnav {
   overflow: hidden;

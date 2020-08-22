@@ -1,7 +1,7 @@
 <template>
   <div scroll="no" id="startpage">
     <VVanta effect="birds" :options="options"></VVanta>
-    <Navbar></Navbar>
+    <Navbar id="nav"></Navbar>
     <Technology></Technology>
   </div>
 </template>
@@ -77,5 +77,8 @@ export default {
   -ms-user-select: None;
   -moz-user-select: None;
   -webkit-user-select: None;
+}
+#nav {
+  margin-bottom: 100%;
 }
 </style>
